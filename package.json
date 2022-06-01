@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "bpk-component-button": "^6.2.4",
+    "bpk-component-calendar": "^11.1.14",
     "bpk-component-code": "^3.1.9",
     "bpk-component-text": "^6.2.0",
     "bpk-mixins": "^28.3.0",
