@@ -2,9 +2,24 @@ import React from 'react';
 import { BpkCode } from 'bpk-component-code';
 import BpkButton from 'bpk-component-button';
 import BpkText from 'bpk-component-text';
+import React from 'react';
+import format from 'date-fns/format';
+
 import STYLES from './App.scss';
 
 const c = className => STYLES[className] || 'UNKNOWN';
+export const formatDateFull = date => format(date, 'EEEE, do MMMM yyyy');
+export const formatMonth = date => format(date, 'MMMM yyyy');
+export const daysOfWeek = [
+  {
+    name: 'Sunday',
+    nameAbbr: 'Sun',
+    index: 0,
+    isWeekend: true,
+  },
+  // ...
+];
+
 const App = () => (
   <div className={c('App')}>
     <header className={c('App__header')}>
@@ -13,12 +28,8 @@ const App = () => (
       </div>
     </header>
     <main className={c('App__main')}>
-      <BpkText tagName="p" className={c('App__text')}>
-        To get started, edit <BpkCode>src/App.jsx</BpkCode> and save to reload.
-      </BpkText>
-      <BpkButton onClick={() => alert('It works!')}>Click me</BpkButton>
+      <BpkButton onClick={() => alert('It works!')}>Continue</BpkButton>
     </main>
   </div>
 );
-
 export default App;
